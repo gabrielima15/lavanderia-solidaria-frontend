@@ -1,0 +1,32 @@
+/* ===== Estrutura geral ===== */
+.site-shell { overflow-x: clip; background: var(--paper); }
+
+/* ===== Cabeçalho (usado nos dois layouts) ===== */
+.site-header {
+  min-height: 78px;
+  background: rgba(247, 250, 247, .94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(8, 124, 117, .08);
+}
+.site-header .nav-link { font-size: .8125rem; font-weight: 600; color: var(--ink); }
+.site-header .nav-link:hover { color: var(--teal); }
+.site-header .navbar-nav .btn { padding: 13px 18px; }
+
+/* ===== Rodapé da Home ===== */
+.site-footer { padding-block: 58px 24px; color: #fff; background: #104b48; }
+.footer-about { max-width: 220px; margin: 19px 0 0; color: #b9d7d0; font-size: .75rem; line-height: 1.7; }
+.footer-item { display: flex; align-items: flex-start; gap: 10px; }
+.footer-symbol { color: #a5e3d5; font-size: 17px; }
+.footer-item h3 { margin: 2px 0 9px; font-size: .6875rem; font-weight: 700; }
+.footer-item p { margin: 0; color: #b9d7d0; font-size: .6875rem; line-height: 1.8; overflow-wrap: anywhere; }
+.footer-bottom { margin-top: 2rem; padding-top: 23px; border-top: 1px solid rgba(255, 255, 255, .13); color: #a9cbc3; font-size: .625rem; }
+.footer-bottom span { color: var(--yellow); }
+
+/* ===== Telas de acesso (Login e Cadastro) ===== */
+.auth-page { flex: 1; display: flex; align-items: center; }
+.auth-footer { padding: 18px 12px; text-align: center; color: var(--muted); font-size: .75rem; }
+.auth-card { border: 1px solid #e4eeea; border-radius: 20px; box-shadow: 0 7px 22px rgba(21, 70, 62, .05); }
+.auth-card__icon { display: grid; place-items: center; flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; background: #def3ed; color: var(--teal); }
+.auth-highlight { display: flex; align-items: flex-start; gap: .75rem; max-width: 420px; padding: 1rem; border-radius: 14px; background: #fff0c9; color: #755313; font-size: .8125rem; line-height: 1.6; }
+.auth-note { display: flex; align-items: flex-start; gap: .75rem; padding: .9rem 1rem; border-radius: 12px; background: #eef6f3; color: var(--muted); font-size: .75rem; line-height: 1.6; }
+.auth-card .input-group-text { background: #f2f8f5; color: var(--teal); }
