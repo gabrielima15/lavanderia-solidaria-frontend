@@ -1,0 +1,46 @@
+.machine-scene { position: relative; display: grid; place-items: center; min-height: 440px; isolation: isolate; }
+.machine-scene::before { content: ''; position: absolute; width: 90%; height: 80%; left: 5%; top: 11%; border-radius: 46% 54% 44% 56% / 48% 40% 60% 52%; background: #dff2ed; transform: rotate(-7deg); z-index: -2; }
+.scene-dot { position: absolute; border-radius: 50%; z-index: -1; }
+.scene-dot--yellow { width: 62px; height: 62px; left: 2%; top: 17%; background: var(--yellow); }
+.scene-dot--mint { width: 28px; height: 28px; right: 9%; top: 10%; background: #b9e6dc; }
+.machine { width: min(100%, 365px); padding: 13px 13px 15px; border-radius: 26px; background: #fff; box-shadow: 0 26px 60px rgba(19, 83, 76, .13); transform: rotate(-1.5deg); z-index: 1; }
+.machine__top { display: flex; justify-content: space-between; align-items: center; height: 26px; padding: 0 8px; }
+.machine__slot { width: 75px; height: 8px; border-radius: 10px; background: #d8eee8; }
+.machine__button { width: 10px; height: 10px; border-radius: 50%; background: var(--teal); }
+.machine__body { padding: 14px 15px 12px; border-radius: 17px; background: #c7e8df; }
+.machine__controls { height: 20px; margin-bottom: 13px; display: flex; align-items: center; gap: 6px; padding: 0 9px; border-radius: 8px; background: #f7fbf8; }
+.machine__controls span { width: 5px; height: 5px; border-radius: 50%; background: #94cfc2; }
+.machine__controls span:last-child { margin-left: auto; width: 12px; height: 12px; background: #d8eee8; }
+.washer-window { position: relative; overflow: hidden; width: 174px; height: 174px; margin: 0 auto 15px; border: 12px solid #f5faf7; border-radius: 50%; background: #a8d8ce; box-shadow: 0 0 0 7px #b9e2d9; }
+.washer-water { position: absolute; inset: 15px; border-radius: 50%; background: #4a9e98; }
+.washer-cloth { position: absolute; border-radius: 60% 45% 50% 40%; transform: rotate(-25deg); }
+.washer-cloth--yellow { width: 95px; height: 58px; left: 24px; top: 54px; background: #ffbf3f; }
+.washer-cloth--coral { width: 53px; height: 44px; right: 16px; top: 56px; background: #f17c61; mix-blend-mode: multiply; }
+.machine__bottom { display: flex; align-items: center; gap: 8px; color: var(--teal); font-size: 20px; }
+.machine__bottom span:last-child { display: flex; flex-direction: column; gap: 3px; color: var(--ink); font-size: 10px; }
+.machine__bottom small { color: #77928c; font-size: 8px; }
+.floating-note { position: absolute; right: -1%; bottom: 11%; display: flex; align-items: center; gap: 10px; padding: 13px 16px; border-radius: 14px; background: #fff; box-shadow: 0 14px 35px rgba(15, 75, 67, .13); z-index: 2; }
+.note-check { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: var(--teal); background: var(--mint); }
+.floating-note b, .floating-note small { display: block; }
+.floating-note b { font-size: 10px; }
+.floating-note small { margin-top: 3px; color: var(--muted); font-size: 8px; }
+.machine-shadow { position: absolute; bottom: 8%; left: 15%; width: 70%; height: 24px; border-radius: 50%; background: rgba(10, 94, 85, .1); filter: blur(13px); z-index: -1; }
+
+@media (min-width: 1200px) {
+  .machine-scene { min-height: 500px; }
+}
+@media (max-width: 850px) {
+  .machine-scene { min-height: 350px; }
+  .machine { width: min(100%, 310px); }
+  .washer-window { width: 145px; height: 145px; }
+}
+@media (max-width: 620px) {
+  .machine-scene { min-height: 315px; }
+  .machine { width: min(80%, 300px); padding: 10px; }
+  .machine__body { padding: 10px; }
+  .washer-window { width: 130px; height: 130px; border-width: 9px; }
+  .washer-cloth--yellow { width: 72px; height: 48px; left: 17px; top: 39px; }
+  .washer-cloth--coral { width: 43px; height: 37px; right: 13px; top: 41px; }
+  .floating-note { right: 0; bottom: 7%; padding: 10px 12px; }
+  .scene-dot--yellow { width: 48px; height: 48px; left: 2%; top: 13%; }
+}
